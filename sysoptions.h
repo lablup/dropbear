@@ -165,7 +165,7 @@ If you test it please contact the Dropbear author */
 /* From transport rfc */
 #define MIN_PACKET_LEN 16
 
-#define RECV_MAX_PACKET_LEN (MAX(35000, ((RECV_MAX_PAYLOAD_LEN)+100)))
+#define RECV_MAX_PACKET_LEN (MAX(450000, ((RECV_MAX_PAYLOAD_LEN)+100)))
 
 /* for channel code */
 #define TRANS_MAX_WINDOW 500000000 /* 500MB is sufficient, stopping overflow */
