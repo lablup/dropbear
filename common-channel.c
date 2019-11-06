@@ -532,11 +532,11 @@ static int writechannel(struct Channel* channel, int fd, circbuffer *cbuf,
 #endif
 
 	/* Window adjust handling */
-	if (channel->recvdonelen >= RECV_WINDOWEXTEND) {
+	//if (channel->recvdonelen >= RECV_WINDOWEXTEND) {
 		send_msg_channel_window_adjust(channel, channel->recvdonelen);
 		channel->recvwindow += channel->recvdonelen;
 		channel->recvdonelen = 0;
-	}
+	//}
 
 	dropbear_assert(channel->recvwindow <= opts.recv_window);
 	dropbear_assert(channel->recvwindow <= cbuf_getavail(channel->writebuf));
