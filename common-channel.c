@@ -814,9 +814,9 @@ void common_recv_msg_channel_data(struct Channel *channel, int fd,
 
 	TRACE(("enter recv_msg_channel_data"))
 
-	if (channel->recv_eof) {
-		dropbear_exit("Received data after eof");
-	}
+	//if (channel->recv_eof) {
+	//	dropbear_exit("Received data after eof");
+	//}
 
 	if (fd < 0 || !cbuf) {
 		/* If we have encountered failed write, the far side might still
